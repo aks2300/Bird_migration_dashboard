@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as pex 
 import plotly.graph_objects as go
 from dash import Dash, html, dcc, callback, Output, Input 
-import dash
+
 
 
 df = pd.read_csv("bird_migration_data.csv")
