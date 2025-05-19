@@ -108,7 +108,7 @@ def out(clickData):
     [Input('region-dropdown', 'value'), Input('species-dropdown', 'value'), Input('reststops-slider', 'value')]
 )
 
-def smth(region, species, restStop):
+def geo_map(region, species, restStop):
     filtered_df = df[(df['Region'] == region) & (df['Species'] == species) & (df['Rest_Stops'].isin(create_Arr(restStop)))]  
     modified_df = pd.DataFrame({
         'lat' : pd.concat([filtered_df['Start_Latitude'], filtered_df['End_Latitude']]),
